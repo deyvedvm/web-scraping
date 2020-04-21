@@ -1,0 +1,31 @@
+{
+    "name": "web-scraping",
+    "version": "1.0.0",
+    "description": "Web Scraping",
+    "main": "src/index.ts",
+    "scripts": {
+        "start": "ts-node src/index.ts",
+        "dev": "nodemon --exec ts-node src/index.ts",
+        "build": "tsc -p .",
+        "test": "jest"
+    },
+    "keywords": [
+        "web-craping",
+        "nodejs",
+        "typescript"
+    ],
+    "author": "Deyve Vieira",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "@types/nodemon": "^1.19.0",
+        "@types/puppeteer": "^2.0.1",
+        "jest": "^25.4.0",
+        "nodemon": "^2.0.3",
+        "ts-node": "^8.9.0",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "puppeteer": "^3.0.0"
+    }
+}

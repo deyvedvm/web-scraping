@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-const scrapeProduct = async (url: string) =>  {
+const scrapeProduct = async (url: string) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(url);
@@ -18,8 +18,14 @@ const scrapeProduct = async (url: string) =>  {
 
     console.log({srcTxt, rawTxt});
 
-    browser.close();
+    await browser.close();
 }
 
-scrapeProduct('https://www.casadocodigo.com.br/products/livro-java9');
+scrapeProduct('https://www.casadocodigo.com.br/products/livro-java9')
+    .then(() => {
+        console.log('Done!')
+    })
+    .catch((err) => {
+        console.log('Error: ', err);
+    });
 
